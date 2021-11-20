@@ -14,11 +14,11 @@ import pyttsx3
 from flask import make_response, send_file
 app = Flask(__name__)
 import os
-@app.route('/')
+@app.route('https://capstoneimagecap.us-east1.r.appspot.com/')
 def index():
     return "Backend running on port 5000"
 
-@app.route('/predict', methods=['POST','GET'])
+@app.route('https://capstoneimagecap.us-east1.r.appspot.com/predict', methods=['POST','GET'])
 def test():
     if request.method == 'POST':
         file = request.files['image']
